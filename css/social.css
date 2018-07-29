@@ -1,0 +1,63 @@
+.content{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5em;
+}
+.social-media-container{
+}
+.social-media-container svg{
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.social-media-container a{
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  color: #000;
+}
+.social-media-container a:visited{
+  color: #666;
+}
+.social-media-container a:hover i{
+  transform: rotateY(360deg);
+  transition: .5s ease all;
+}
+
+form p{
+  margin-bottom: 2px;
+}
+form input{
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  min-width: 20%;
+  max-width: 100%;
+  padding: 1em;
+  width: calc(100% - 2px - 2em);
+}
+form textarea{
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  width: calc(100% - 2px - 2em);
+  resize:vertical;
+  min-height: 100px;
+  padding: 1em;
+}
+#submit-button{
+  color: white;
+  background: #333;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#submit-button:active{
+  border-bottom: 3px solid #000;
+}
+@media screen and (max-width: 640px) {
+  form textarea, form input, #submit-button{
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+}
