@@ -32,12 +32,12 @@ You are not allowed to sell it anywhere, without our permission.
         <!-- Here you can change your logo. Edit the 'alt' to better describe this image to searchengines. Put the Company Name or just the text from the image in there! -->
         <img src="img/logo.png" alt="GameDev" id="logo">
         <!-- If you want to, you can change the navigation here. The 'font-weight' indicates the user, which site he currently is on. -->
-        <div class="nav" id="myTopnav">
+        <div class="nav" id="nav">
+          <a href="javascript:void(0);" onclick="expandMenu()">Menü</a>
           <a href="#" style="font-weight:700;">Home</a>
           <a href="games/">Games</a>
           <a href="contact/">Contact</a>
           <a href="about/">About</a>
-          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
         </div>
       </div>
       <!-- Here is the caption to the featured game or image you choose to present at the startpage! -->
@@ -144,11 +144,15 @@ You are not allowed to sell it anywhere, without our permission.
         </div>
     </div>
 </div>
+<script>
+    function expandMenu() {
+        var x = document.getElementById("nav");
+        if (x.className === "nav") {
+            x.className += " responsive";
+        } else {
+            x.className = "nav";
+        }
+    }
+</script>
   </body>
 </html>
-
-<script>
-// This script handels the responsive nagigation.
-function myFunction() {
-    var x = document.getElementById("myTopnav");if (x.className === "nav") {x.className += " responsive";} else {x.className = "nav";}}
-</script>

@@ -27,9 +27,9 @@ body {
 
 .navigation{
   display: inline-block;
-  width: 70%;
+  width: 80%;
   height: 100px;
-  padding: 1em 15%;
+  padding: 1em 10%;
 background: linear-gradient( to bottom, hsla(0, 0%, 100%, 0.41) 0%, hsla(0, 0%, 100%, 0.405) 9.4%, hsla(0, 0%, 100%, 0.39) 17.5%, hsla(0, 0%, 100%, 0.367) 24.7%, hsla(0, 0%, 100%, 0.338) 31.1%, hsla(0, 0%, 100%, 0.304) 36.8%, hsla(0, 0%, 100%, 0.266) 42.1%, hsla(0, 0%, 100%, 0.225) 47.1%, hsla(0, 0%, 100%, 0.185) 52.1%, hsla(0, 0%, 100%, 0.144) 57.2%, hsla(0, 0%, 100%, 0.106) 62.5%, hsla(0, 0%, 100%, 0.072) 68.3%, hsla(0, 0%, 100%, 0.043) 74.8%, hsla(0, 0%, 100%, 0.02) 82.1%, hsla(0, 0%, 100%, 0.005) 90.5%, hsla(0, 0%, 100%, 0) 100% );
 }
 #logo{
@@ -57,12 +57,20 @@ background: linear-gradient( to bottom, hsla(0, 0%, 100%, 0.41) 0%, hsla(0, 0%, 
   line-height: 97px;
   text-shadow: white 1px 1px 40px;
 }
+.nav a:first-child{
+  display: none;
+}
 
 .nav a:hover {
   border-bottom: 3px solid #333;
   color: black;
+  padding-bottom: 2px;
 }
-
+.nav a:first-child:hover{
+  border-bottom: 3px solid #333;
+  color: black;
+  padding-bottom: 3px;
+}
 .nav .icon {
   display: none;
 }
@@ -87,10 +95,13 @@ background: linear-gradient( to bottom, hsla(0, 0%, 100%, 0.41) 0%, hsla(0, 0%, 
 }
 
 @media screen and (max-width: 640px) {
+  .nav a:first-child{
+    display: block;
+  }
   .nav{
     width: 100%;
   }
-  .navigation{
+  .nav{
     width: 100%;
     margin: 0;
     height: auto;
@@ -100,33 +111,84 @@ background: linear-gradient( to bottom, hsla(0, 0%, 100%, 0.41) 0%, hsla(0, 0%, 
     margin: 10px 10% 0 10%;
   }
   .nav a:not(:first-child) {display: none;}
-  .nav a.icon {
-    float: right;
-    display: block;
-  }
-  .nav a:hover {
-    border-bottom: 0;
-  }
-  .nav.responsive {position: relative;margin-top: 26px;}
-  .nav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .nav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-    line-height: 45px;
-    border-bottom: 1px solid #f3f3f3;
-  }
   .content-title {
     margin: 40px 0 0 15%;
   }
 }
 
 
+/*Semi-Mobile Navigation*/
+@media (max-width: 1240px) {
+    .nav{
+        float: inherit;
+    }
+}
 
+/*Mobile Navigation*/
+@media (max-width: 1070px) {
+    .nav a::before,
+    .nav a::after {
+      height: 0;
+    }
+
+    .nav a {
+      color: #333;
+      line-height: 50px;
+      width: 100%;
+      padding: 0;
+    }
+
+    .nav {
+      float: inherit;
+      display: block;
+      background: #eaeaea;
+      margin: 4% 0 8% 0;
+      border-radius: 5px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      width: 100%;
+      padding: 0;
+    }
+
+    .nav a:not(:first-child) {
+        display: none;
+    }
+
+    .nav a:first-child {
+        display: inline-block;
+        text-align: center;
+        background: #eaeaea;
+        font-weight: 600;
+        color: #333;
+        border-bottom: 1px #333 solid;
+    }
+
+    .nav a:first-child {
+        display: block !important;
+    }
+
+    .nav.responsive a:first-child {
+        margin-bottom: 10px;
+    }
+
+    .nav.responsive {
+      position: absolute;
+      z-index: 1;
+      width: 80%;
+    }
+
+    .nav.responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .nav a {
+        display: block;
+        padding: 5px 0 5px 0;
+        color: #333;
+        cursor: pointer;
+    }
+}
 
 
 /*

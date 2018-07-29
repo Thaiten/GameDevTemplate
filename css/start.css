@@ -119,8 +119,7 @@
 @media screen and (max-width: 640px) {
   .game-header{
     max-width: calc(80% - 60px);
-    position: absolute;
-    bottom: 5%;
+    margin-top: 0%;
   }
 }
 
