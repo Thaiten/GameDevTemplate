@@ -48,7 +48,7 @@ background: linear-gradient( to bottom, hsla(0, 0%, 100%, 0.41) 0%, hsla(0, 0%, 
 .nav a {
   float: left;
   display: block;
-  color: #333;
+  color: #111;
   text-align: center;
   padding: 0px 16px;
   text-decoration: none;
